@@ -1,0 +1,78 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.AppDevWrapper {
+    background-color: #DAE2ED;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.UIUXWrapper {
+    background-color: #CBD7E7;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.GameDevWrapper {
+    background-color: #BACCE3;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.AppProjectsWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ProjectNames {
+    color:#7492BB;
+}
+
+.Stumble {
+    display:flex;
+    justify-content: center;
+}
+.firstPart {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.handleImages {
+    margin:1rem;
+}
+
+.firstPart {
+    float:left;
+    margin: 1rem 0;
+}
+
+.Shop {
+    display:flex;
+    justify-content: center;
+}
+
+.ShopImage {
+    max-width: 22rem;
+}
+.MinersHaven {
+    position:relative;
+    max-width:80rem;
+    left:10%;
+}
+.MinersHavenOverview {
+    display:flex;
+    justify-content: center;
+}
+#handles {
+    display:flex;
+    justify-content: center;
+}
+
+
+/* Button Displacement */
+.displaced {
+    margin-left:4.6rem;
+}

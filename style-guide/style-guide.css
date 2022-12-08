@@ -1,0 +1,345 @@
+@font-face {
+    src:url(fonts/Bitter-VariableFont_wght.ttf);
+    font-family: Bitter;
+}
+@font-face {
+    src:url(fonts/MeriendaOne-Regular.ttf);
+    font-family: Merienda-One;
+}
+@font-face {
+    src:url(fonts/MavenPro-VariableFont_wght.ttf);
+    font-family: MavenPro;
+}
+/* Style guide stuff */
+.styleGuideEntry {
+    text-align: center;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+h1 {
+    font-size:2.5rem;
+    font-weight:500;
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+p {
+    line-height: 1.5rem;
+}
+
+.styleGuide {
+    background-color: #E2E8F0;
+}
+/* Color Palettes */
+.styleGuideColorPalette {
+    display: flex;
+    justify-content: center;
+}
+.styleGuideColorPalette * {
+    padding:2rem;
+}
+.boxed {
+    border:0.05rem solid black;
+}
+.navBarColorWrapper {
+    background-color: #2D3748;
+}
+.homepageWrapper {
+    background-color: #E2E8F0;
+}
+.primaryWrapper {
+    background-color: #DAE2ED;
+}
+.secondaryWrapper {
+    background-color: #CBD7E7;
+}
+.thirdWrapper {
+    background-color: #BACCE3;
+}
+
+/* Nav Elements */
+.navBar {
+    display: flex;
+    background-color: #2D3748;
+    padding:1rem;
+    justify-content: space-between;
+}
+.navName {
+    color:white;
+}
+.navElements {
+    font-size:2rem;
+    padding:0;
+    margin:0;
+    cursor:pointer;
+}
+.navElements:hover {
+    color:white;
+}
+.navDirectory {
+    display:flex;
+    float:right;
+}
+.navDirectory * {
+    color:#718096;
+    font-size: 1.3rem;
+    margin: 0.2rem 1rem 0 1rem;
+}
+#highlighted {
+    color:white;
+}
+
+/* Handles */
+.handles * {
+    text-decoration: none;
+}
+.handleImages {
+    max-width:2rem;
+    margin: 0 0.5rem 0 0.5rem;
+    text-decoration: none;
+}
+.handleImages:hover, .handleImages:focus{
+    opacity:60%;
+    cursor:pointer;
+}
+.mailLogo {
+    max-width:2.5rem;
+}
+
+.alignCenter {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Intro */
+.introWrapper {
+    background-color: #E2E8F0;
+    padding: 5rem 3rem 5rem 3rem;
+    display:block;
+    margin-bottom: -2rem;
+}
+
+.introContainer {
+    max-width: 80rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    display:flex;
+    justify-content: center;
+}
+#bio {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+}
+#firstLine {
+    font-family: Bitter;
+}
+#school {
+    margin-block-start: -1rem;
+}
+#focus {
+    font-size:0.95rem;
+    margin-block-start: 0;
+    max-width:30rem;
+}
+
+#personal, #interests {
+    max-width:30rem;
+}
+#name, #hand {
+    float:left;
+}
+
+#headshotPicture {
+    margin-left:5rem;
+    margin-top:4rem;
+    max-width:15rem;
+    border: 0.05rem solid black;
+}
+
+/* Projects on Landing Page */
+.spacing {
+    padding:3rem;
+}
+
+.projectsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.projectContainer {
+    padding:1.5rem 5rem 1.5rem 5rem;
+    max-width: 80rem;
+    display:flex;
+    justify-content: center;
+}
+
+.project {
+    margin-bottom:-0.2rem;
+    transform: translateY(0.3rem);
+    transform:scale(1.015);
+    transition: 0.1s ease-in-out;
+}
+.project:hover, .project:focus {
+    transform: scale(1.02);
+}
+.rounded {
+    border-radius: 0.5rem;
+    border:0 solid #E2E8F0;
+}
+.projectText {
+    margin-top:2rem;
+    color:black;
+    z-index:1;
+}
+.projectTitle {
+    text-align: center;
+}
+.projectDescription {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    max-width:19rem;
+}
+.addBorder {
+    border:0.05rem solid grey;
+    border-radius:2rem;
+}
+.projectSubContainer{
+    display:flex;
+    border: 0.1rem solid grey;
+    border-radius:2.3rem;
+    background-color:#E2E8F0;
+    
+}
+
+/* Projects Page */
+
+/* Button Design */
+.button {
+    margin:1rem;
+    padding:0.1rem;
+    background-color: #2D3748;
+    text-align: center;
+    max-width:11rem;
+    border: 0.01rem solid grey;
+    border-radius: 2.4rem;
+    transition: 0.1s ease-in;
+}
+.buttonText {
+    font-size: 1rem;
+    font-weight: 100;
+    color:white;
+}
+
+.button:hover, .button:focus {
+    background-color: #404856;
+    transform:scale(1.03);
+}
+
+/*Project Overviews */
+.projectIntro {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#title {
+    font-family: Merienda-One;
+}
+#slogan {
+    font-weight: 100;
+    font-family: Merienda-One;
+}
+#titleMaven {
+    font-family: MavenPro;
+}
+#sloganMaven {
+    font-weight: 100;
+    font-family: MavenPro;
+}
+.projectsOverview {
+    padding: 2rem;
+    background-color: #DAE2ED;
+}
+.projectsOverviewHeader {
+    text-align: center;
+}
+.projectsOverviewSubheader {
+    margin-bottom: -0.5rem;
+}
+.UIDesign, .completed-prePolish, .completed-postPolish,
+.challenges, .conclusion {
+    padding: 2rem;
+}
+.details {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ideation, .content {
+    max-width: 60rem;
+}
+.inTextLink {
+    text-decoration: none;
+    color:blue;
+}
+.inTextLink:hover, .inTextLink:focus {
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+/*Image Collage*/
+.imageWrapper {
+    display:flex;
+    flex-wrap: wrap;
+}
+.imageList {
+    list-style:none;
+    display:flex;
+    flex-wrap: wrap;
+}
+.StumbleImage {
+    max-width: 10rem;
+}
+.slide{
+    margin:1rem;
+}
+.enlarged {
+    max-width: 85rem;
+}
+
+/* Others */
+.shopThumbnail {
+    max-width: 30rem;
+    border: 0.05rem solid black;
+    border-radius: 2rem;
+}
+.minersHavenThumbnail {
+    max-width: 30rem;
+    border: 0.05rem solid black;
+    border-radius: 2rem;
+}
+
+.minersHavenVideo {
+    width:40rem;
+    height:22rem;
+    border-width: 0;
+}
+.videoPlayerContainer {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-width: 0;
+}
+.videoPlayer {
+    width: 50rem;
+    height:30rem;
+}

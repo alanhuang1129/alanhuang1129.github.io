@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Alan Huang</title>
+
+        <link href="style-guide/style-guide.css" rel="stylesheet">
+        <link href="css/project-overview-css/stumble-overview.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navBar">
+            <div class="navName">
+                <a href="index.html">
+                    <h2 class="navElements">Alan Huang</h2>
+                </a>
+            </div>
+            <div class="navDirectory">
+                <a href="index.html">
+                    <h2 class="navElements">
+                        Portfolio
+                    </h2>
+                </a>
+                <a href="projects.html">
+                    <h2 class="navElements" id="highlighted">
+                        Projects
+                    </h2>
+                </a>
+                <a href="">
+                    <h2 class="navElements">
+                        Resume
+                    </h2>
+                </a>
+            </div>
+        </nav>
+        <div class="projectsOverview">
+            <div class="projectIntro">
+                <img class="projectImage" src="style-guide/images/StumbleImages/StumbleLogo.png" alt="Stumble Logo">
+                <h1 id="title">Stumble</h1>
+                <a href="https://github.com/alanhuang1129/Stumble">
+                    <img class="handleImages" src="style-guide/images/github_black_logo_icon.png" alt="Github Icon">
+                </a>
+                <h2 id="slogan">The application that suggests potentially fun and interesting activities you could do on a date</h2>
+            </div>
+            <hr>
+            <h2 class="projectsOverviewHeader">Ideation and Overview</h2>
+            <div class="details">
+                <div class="ideation">
+                    <h3 class="projectsOverviewSubheader">Coding Environment</h3>
+                    <p>
+                        This project is being developed in Android Studio using Java as the programming language.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Criteria</h3>
+                    <p>
+                        The 
+                        <a href="res/ProjectDescription.pdf" target="_blank" class="inTextLink">criteria</a>
+                        for our project was to have at least four app activities, implicit and explicit intents,
+                        local data storage using both Shared Preferences and SQLite Database, sensor functionality,
+                        and either camera or GPS usage.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Ideation</h3>
+                    <p>
+                        Taking this into account, my project partner and I thought of the issues that we and the general public have.
+                        Since people tend to be indecisive, especially when considering places to dine out, we thought of an app that would
+                        give suggestions to users about places within the vicinity. 
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Data Acquisition</h3>
+                    <p>
+                        To receive data of our activities, we needed an external source of data. So we looked into some APIs that might
+                        help us search for them. At first, we looked at the Eventbrite API because Eventbrite has hosted a lot of events
+                        and their API might be what we were looking for, but shortly after we discovered the event search endpoint was deprecated in 2019
+                        so we needed another source of data. Thankfully we found that the Yelp API does search for businesses around a given location which
+                        handles our dining resources. Due to the lack of time, we decided to only let the app search for nearby restaurants and not any other
+                        activities. For future developments we want to find a suitable API for the other activities.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Core Functionality</h3>
+                    <p>
+                        To implement the usage of local persistent data storage, we imported the data fetched by the Yelp API and
+                        stored it directly into the SQLiteDatabase which is directly connected to a RecyclerView which gives a 
+                        inflated view of listings. Each listing can be clicked to redirect into a new activity that gives the user
+                        a detailed description of the activity and an implicit intent to redirect the user to a google map view of the location.
+                        As for Shared Preferences, we stored the data such as search settings to filter the search. The API endpoint supported
+                        parameters such as distance (in radius) and categories (such as chinese or korean cuisine) so we have those as the search settings.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Limitations</h3>
+                    <p>
+                        Initially our idea for the app was to suggest a multitude of things
+                        such as restaurants, dining, events, and maybe even sports activities that users could do depending on their mood. However, down
+                        the line towards the creation of our app, we were limited by several factors such as the amount of data given to us by our APIs.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="UIDesign secondaryWrapper">
+            <h2 class="projectsOverviewHeader">User Interface Design</h2>
+            <div class="details">
+                <p>
+                    This is our design prototype that we have made through Figma. It is our targeted goal for the app user interface.
+                </p>
+            </div>    
+            <div class="imageWrapper details">
+                <div class="Images">
+                    <ul class="imageList">
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/SplashScreen.png" alt="Splash Screen">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Home.png" alt="Home Screen">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/EventDetails.png" alt="Event Details">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/MapView.png" alt="Map View">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Search-WhiteBar.png" alt="Search Screen">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Filter.png" alt="Filters">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="completed-prePolish secondaryWrapper">
+            <h2 class="projectsOverviewHeader">Completed App - Pre-UI Polish</h2>
+            <div class="details">
+                <p>
+                    The app with completed code of the core features before the UI design process.
+                </p>
+            </div>
+            <div class="imageWrapper details">
+                <div class="Images">
+                    <ul class="imageList">
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Pre-polish/home.png" alt="Home Screen">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Pre-polish/filter.png" alt="Filter">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Pre-polish/dining.png" alt="Dining">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Pre-polish/saved.png" alt="Saved">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Pre-polish/selected.png" alt="Selected">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="completed-postPolish secondaryWrapper">
+            <h2 class="projectsOverviewHeader">Completed App - Post-UI Polish</h2>
+            <div class="details">
+                <p>
+                    The app with completed code of the core features after the UI design process.
+                    Unfortunately the Web View still does not work.
+                </p>
+            </div>
+            <div class="imageWrapper details">
+                <div class="Images">
+                    <ul class="imageList">
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Post-polish/home.png" alt="Home Screen">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Post-polish/filter.png" alt="Filter">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Post-polish/dining.png" alt="Dining">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Post-polish/saved.png" alt="Saved">
+                        </li>
+                        <li class="slide">
+                            <img class="StumbleImage" src="style-guide/images/StumbleImages/Post-polish/selected.png" alt="Selected">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="challenges thirdWrapper">
+            <div>
+                <h2 class="projectsOverviewHeader">Challenges</h2>
+                <div class="details">
+                    <div class="content">
+                        <h3 class="projectsOverviewSubheader">API Limitations</h3>
+                        <p>
+                            As mentioned before, we were limited by the extent of our API data. We did not have a source of data for 
+                            events, sports, and other activities. In addition to this, the category search for the businesses could not
+                            help us find dessert-specific places.
+                        </p>
+                        <p>
+                            Other limitations with API were things like features. We wanted to implement an image carousel with multiple
+                            images of the activity (much like a product page), but we were only provided one image URL.
+                        </p>
+                        <p>
+                            Since it was basically my first time working with an API, I had no idea how to do any authentication with the API key.
+                            Most of the APIs I had worked with or seen before had just used an API key as a parameter in the URL.
+                            Through this process, I learned how to use REST API and send a GET request to acquire my data.
+                            A tool that helped me through this struggle was Postman, which helped me send requests to my APIs and visually
+                            see the output of the request.
+                        </p>
+                        <h3 class="projectsOverviewSubheader">Time constraints</h3>
+                        <p>
+                            A very obvious challenge was the time constraint. We had less than a semester (roughly 2-3 months) to make the app.
+                            Moving forwards after the project due date, I would like to work more on the app and fully complete and polish it to 
+                            make it similar to the designs we made in the design prototype.
+                        </p>
+                        <h3 class="projectsOverviewSubheader">Processes and Threads</h3>
+                        <p>
+                            I used an AsyncTask to handle API data processing operations as well as image processing operations
+                            for the Image Views, however due to their asynchronous nature, it has lead our app functionality to
+                            behave disorderly, to the point where you would have to wait in the homepage or re-enter the app to have
+                            the data processed.
+                        </p>
+                        <h3 class="projectsOverviewSubheader">Data Recycling</h3>
+                        <p>
+                            For multiple reasons like memory allocation and search filtering, I needed to recycle the data when
+                            the user exits the page filled with listings. This will ensure that everytime users enter a different search filter,
+                            they will not encounter their past results.
+                        </p>
+                        <h3 class="projectsOverviewSubheader">Typical Coding Issues</h3>
+                        <p>
+                            In addition to APIs, it was also my first time using the SQLiteDatabase and Shared Preferences.
+                            This lead to a few minor memory allocation issues. There were also complications with other features such as the
+                            Web View. I linked the Web View with a google maps URL to display the location of the selected listing but it never worked.
+                        </p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="conclusion thirdWrapper">
+            <div>
+                <h2 class="projectsOverviewHeader">Conclusion</h2>
+                <div class="details">
+                    <div class="content">
+                        <p>
+                            Making this app made me learn a lot about the tools to make an app and how to apply these tools for 
+                            my personal needs as well as users in general. Even after completing the project, I still feel like the app 
+                            is an unfinished product that has the potential to be something well-used by everyone.
+                        </p>
+                        <p>
+                            When ideating for the project, I had no idea what kinds of apps developers could make to serve a meaningful purpose as 
+                            it doesn't seem like you can do too much because of the limitations of being within a mobile device. You would have to work
+                            with features and sensors that are provided by a mobile device. After seeing what other people have made and what I have made,
+                            it has widened my vision for app ideas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
