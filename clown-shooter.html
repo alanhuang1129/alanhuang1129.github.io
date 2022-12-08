@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Alan Huang</title>
+
+        <link href="style-guide/style-guide.css" rel="stylesheet">
+        <link href="css/projects.css" rel="stylesheet">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="navBar">
+            <div class="navName">
+                <a href="index.html">
+                    <h2 class="navElements">Alan Huang</h2>
+                </a>
+            </div>
+            <div class="navDirectory">
+                <a href="index.html">
+                    <h2 class="navElements">
+                        Portfolio
+                    </h2>
+                </a>
+                <a href="projects.html">
+                    <h2 class="navElements" id="highlighted">
+                        Projects
+                    </h2>
+                </a>
+                <a href="res/Resume.pdf" target="_blank">
+                    <h2 class="navElements">
+                        Resume
+                    </h2>
+                </a>
+            </div>
+        </nav>
+        <div class="projectsOverview">
+            <div class="projectIntro">
+                <img class="projectImage clownShooterThumbnail" src="style-guide/images/Clown-Shooter.png" alt="Clown Shooter Thumbnail">
+                <h1 id="titleMaven">Clown Shooting Game</h1>
+                <div id="handles">
+                    <a href="https://github.com/alanhuang1129/Clown-Shooting-Game">
+                        <img class="handleImages" src="style-guide/images/github_black_logo_icon.png" alt="Github Logo">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=D3hmIFssYFI&ab_channel=JeremyKontulahti">
+                        <img class="handleImages" src="style-guide/images/youtube_black_logo_icon.png" alt="Youtube Logo">
+                    </a>
+                </div>
+                <h2 id="sloganMaven">A game where you shoot clowns with your hands</h2>
+            </div>
+            <hr>
+            <h2 class="projectsOverviewHeader">Ideation and Overview</h2>
+            <div class="details">
+                <div class="ideation">
+                    <h3 class="projectsOverviewSubheader">Coding Environment</h3>
+                    <p>
+                        This is my first project for making a game. The IDE I used to develop the game is Processing which is coded in Java.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Game Idea</h3>
+                    <p>
+                        Since I have played a lot of games in the past and I know a good amount of highly rated games.
+                        The game I chose as inspiration and tried to replicate a part of it was Stardew Valley. I loved the mining
+                        gameplay of Stardew Valley so I wanted to make a game around that. In addition to that, I also took inspiration from 
+                        Minecraft with their pickaxe tiers and an object design from Genshin Impact.
+                    </p>
+                    <p>
+                        The objective of the game is to leave the mines and to do that the player will need to navigate
+                        through rooms filled with minerals.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Control Scheme</h3>
+                    <p>
+                        The player moves with 'WASD' which is default player movement. The player also has a crafting menu 
+                        that also displays the inventory which is brought up by pressing 'B'. The player has a pickaxe that they 
+                        can charge and swing. Players can charge their swing by holding down the Left Mouse Button (LMB). The longer
+                        the player charges the pickaxe, the higher the damage the swing will be up to a certain limit. The swings are 
+                        categorized into levels of swings where a heavy swing is when the player holds for approximately 2-3 seconds which will
+                        deal the max damage. A heavy swing is indicated through text on the user interface.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Level Design</h3>
+                    <p>
+                        The player has to traverse through rooms where the exits to each room are at the cardinal directions of the room.
+                        As the player progresses closer to the exit of the mines, they will encounter minerals that are harder to mine. 
+                        For example, a Gold Ore will have triple the amount of health of an Iron Ore. This 
+                        will chain of minerals will repeatedly exponentially increase every tier. The minerals in the game are: 
+                        Stone, Coal, Iron, Gold, Diamond, and Obsidian, where Obsidian would have 3<sup>5</sup> times more health than Stone.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Gearing Up</h3>
+                    <p>
+                        The player starts with a stone pickaxe but can be upgraded through the minerals that the players mine.
+                        To upgrade the pickaxe, players would need to craft a furnace with stone from the crafting menu and smelt iron ore and coal for iron bars.
+                        Using the iron bars, the players can upgrade their pickaxe to an iron pickaxe, and upgrade their tools further through gold and diamond.
+                        Each upgrade multiplies the damage the pickaxe does by three so the difficulty of breaking an iron ore from stone pickaxe would be the same as 
+                        breaking a gold ore with an iron pickaxe.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Enemies</h3>
+                    <p>
+                        Some upgrades require enemy drops. I have designed one type of enemy in the game which is modelled
+                        after a pillar created by Zhongli in Genshin Impact. This pillar shoots a projectile that creates pulsing areas of effect
+                        (shown as yellow pulsating circles) towards the player, damaging them on contact. These enemies can be killed through pickaxe swings.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="UIDesign secondaryWrapper">
+            <h2 class="projectsOverviewHeader">Gameplay Video</h2>
+            <div class="details">
+                <p>
+                    This recording has no audio.
+                </p>
+            </div>    
+            <div class="videoPlayerContainer">
+                <iframe class="videoPlayer"
+                    src="https://www.youtube.com/embed/uMNrtV0p370" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="challenges thirdWrapper">
+            <div>
+                <h2 class="projectsOverviewHeader">Challenges</h2>
+                <div class="details">
+                    <div class="content">
+                        <h3 class="projectsOverviewSubheader">Movement Collision</h3>
+                        <p>
+                            The collision handling was challenging because the player should be prevented from colliding with the rocks.
+                            The only solution I could have done through code was to push the player back after they collide with the rock.
+                            A few years after developing this project, I discover that games use ray tracing to detect collision ahead of the 
+                            player movement to prevent the player from colliding in the obstacles.
+                        </p>
+                        <h3 class="projectsOverviewSubheader">Digital Mapping</h3>
+                        <p>
+                            I have never used digital mapping before to design a level so the product ended up being a little sloppy. However,
+                            I still ended up working fine. Some challenges I had with it were the sizing of objects. Since not all objects were of
+                            the same dimension, the mapping ended up dispropotional.
+                        </p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="conclusion thirdWrapper">
+            <div>
+                <h2 class="projectsOverviewHeader">Conclusion</h2>
+                <div class="details">
+                    <div class="content">
+                        <p>
+                            In the end I have learned a lot about collision and mapping of levels through code. I made a game
+                            that I would be proud about, especially since it is my first game project. In retrospect, the game mechanics
+                            and level design have a solid structure and narrative, enough for me to consider it a great success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

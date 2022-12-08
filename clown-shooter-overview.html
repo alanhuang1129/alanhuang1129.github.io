@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Alan Huang</title>
+
+        <link href="style-guide/style-guide.css" rel="stylesheet">
+        <link href="css/projects.css" rel="stylesheet">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="navBar">
+            <div class="navName">
+                <a href="index.html">
+                    <h2 class="navElements">Alan Huang</h2>
+                </a>
+            </div>
+            <div class="navDirectory">
+                <a href="index.html">
+                    <h2 class="navElements">
+                        Portfolio
+                    </h2>
+                </a>
+                <a href="projects.html">
+                    <h2 class="navElements" id="highlighted">
+                        Projects
+                    </h2>
+                </a>
+                <a href="res/Resume.pdf" target="_blank">
+                    <h2 class="navElements">
+                        Resume
+                    </h2>
+                </a>
+            </div>
+        </nav>
+        <div class="projectsOverview">
+            <div class="projectIntro">
+                <img class="projectImage clownShooterThumbnail" src="style-guide/images/old/Clown-Shooter.png" alt="Clown Shooter Thumbnail">
+                <h1 id="titleMaven">Clown Shooting Game</h1>
+                <div id="handles">
+                    <a href="https://github.com/alanhuang1129/Clown-Shooting-Game">
+                        <img class="handleImages" src="style-guide/images/github_black_logo_icon.png" alt="Github Logo">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=D3hmIFssYFI&ab_channel=JeremyKontulahti">
+                        <img class="handleImages" src="style-guide/images/youtube_black_logo_icon.png" alt="Youtube Logo">
+                    </a>
+                </div>
+                <h2 id="sloganMaven">A game where you shoot clowns with your hands</h2>
+            </div>
+            <hr>
+            <h2 class="projectsOverviewHeader">Ideation and Overview</h2>
+            <div class="details">
+                <div class="ideation">
+                    <h3 class="projectsOverviewSubheader">Coding Environment</h3>
+                    <p>
+                        This game was done using Arduino for the hardware and Processing for the game visuals
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Criteria</h3>
+                    <p>
+                        Since this project is about Embedded systems,
+                        the project had to utilize sensor functionality, actuators, coding logic, and a game visual with Processing.
+                        Some of the required sensors were light sensors, sliders, buttons, etc.
+                        As for the actuators, we needed to implement motors, LEDs and a buzzer.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Game Idea</h3>
+                    <p>
+                        Taking into account of the sensors that we had and the sensors and actuators that were required to use, we eventually
+                        came with the idea of setting sensors on a hand and controlling something while visually outputting the event into processing, similar
+                        to an arcade game. Some ideation inspirations were those Time Crisis games in the arcade where you would have a pedal to control taking cover while
+                        you shoot enemies on the screen with a physical gun. Other inspirations were carnival shootings games where you would have a rifle that shoots pellets at
+                        some targets.
+                    </p>
+                    <p>
+                        Our idea ended up as a game that where you shoot targets that are activated or deactivated through a motor, where
+                        the weapon to shoot these targets is your hand. This would then display a game visual on Processing with a high score.
+                    </p>
+                    <h3 class="projectsOverviewSubheader">Sensors and Actuators</h3>
+                    <p>
+                        For the sensors, we used light sensors to detect when a light is shining on the target, a touch sensor to
+                        shoot the gun (this will be attached to the glove), a flex sensor attached to the thumb to detect reloads.
+                    </p>
+                    <p>
+                        For the actuators, we used 3 separate motors that would bring up or down targets, LEDs to display what target was up,
+                        a laser pointer that represents the gunfire (the laser will shine on the light sensors), and a buzzer to buzz when a target was shot.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="UIDesign secondaryWrapper">
+            <h2 class="projectsOverviewHeader">Gameplay Video</h2>
+            <div class="details">
+                <p>
+                    An overview video with detailed explanation of the game
+                </p>
+            </div>    
+            <div class="videoPlayerContainer">
+                <iframe class="videoPlayer"
+                    src="https://www.youtube.com/embed/D3hmIFssYFI" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="challenges thirdWrapper">
+            <div>
+                <h2 class="projectsOverviewHeader">Challenges</h2>
+                <div class="details">
+                    <div class="content">
+                        <h3 class="projectsOverviewSubheader">Hardware Issues</h3>
+                        <p>
+                            We ended up encountering a lot of hardware issues where some sensors or motors don't work as intended, nor will some of the motors.
+                            Some of these issues were associated with the software. As for the sensitivity, most sensors such as the flex and touch sensor may have
+                            given some false positives or negatives even with pinpoint thresholds. Another issue was the wiring. Due to the excessive amount of wires,
+                            some wires were loose or not even connected because the pins on the Arduino could not like with the wires.
+                            Most of the other wires however were soldered and had a fine connection.
+                        </p>
+                        <p>
+                            Also, due to the nature of the code, light sensors may or may not function properly in a well-lit or light-changing environment. The light sensors are coded to
+                            detect a slight difference in sensor readings. Therefore, when the ambient light changes the light sensors might detect that as a target being hit.
+                        </p>
+                        <h3 class="projectsOverviewSubheader">Software Issues</h3>
+                        <p>
+                            I had encountered a lot of software issues when dealing with timing. In Arduino, there is a delay method where it would pause the code 
+                            for a given amount of milliseconds. This method is desirable when working with timing, however this method halts the whole code and 
+                            cannot run anything asynchronously.
+                        </p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="conclusion thirdWrapper">
+            <div>
+                <h2 class="projectsOverviewHeader">Conclusion</h2>
+                <div class="details">
+                    <div class="content">
+                        <p>
+                            After this project, I have learned to always test hardware functionality to ensure the problem is not
+                            within the hardware. In doing so, I would be able to narrow down my bugs to only of software or firmware issues.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

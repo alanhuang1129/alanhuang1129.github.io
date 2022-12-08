@@ -48,7 +48,9 @@
     float:left;
     margin: 1rem 0;
 }
-
+.GrandtKitchen {
+    padding-bottom: 5rem;
+}
 .Shop {
     display:flex;
     justify-content: center;
@@ -71,6 +73,19 @@
     justify-content: center;
 }
 
+#Clown-Name {
+    position: relative;
+    right: 10%;
+}
+.ClownShooter {
+    max-width:80rem;
+    display: flex;
+    justify-content: space-between;
+}
+.ClownShooter .firstPart {
+    position:relative;
+    left:12%;
+}
 
 /* Button Displacement */
 .displaced {
