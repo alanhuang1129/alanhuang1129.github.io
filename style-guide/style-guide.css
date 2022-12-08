@@ -174,7 +174,7 @@ p {
 }
 .projectContainer {
     padding:1.5rem 5rem 1.5rem 5rem;
-    max-width: 80rem;
+    max-width: 200rem;
     display:flex;
     justify-content: center;
 }
@@ -309,6 +309,9 @@ p {
 .StumbleImage {
     max-width: 10rem;
 }
+.GKImage {
+    max-width:12rem;
+}
 .slide{
     margin:1rem;
 }
@@ -322,13 +325,13 @@ p {
     border: 0.05rem solid black;
     border-radius: 2rem;
 }
-.minersHavenThumbnail {
+.minersHavenThumbnail, .clownShooterThumbnail, .grandtKitchenThumbnail{
     max-width: 30rem;
     border: 0.05rem solid black;
     border-radius: 2rem;
 }
 
-.minersHavenVideo {
+.minersHavenVideo, .clownShooterVideo {
     width:40rem;
     height:22rem;
     border-width: 0;
@@ -342,4 +345,7 @@ p {
 .videoPlayer {
     width: 50rem;
     height:30rem;
+}
+#DesignConcepts {
+    max-width: 25rem;
 }
